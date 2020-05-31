@@ -6,8 +6,8 @@ class Nuke < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/Matt-Gleich/nuke/releases/download/1.0.2/nuke_1.0.2_darwin_amd64.tar.gz"
-    sha256 "215ef5195493df647c8d9fd34ca014b501e51c11a91f05e90ae14ec812cd6a10"
+    url "https://github.com/Matt-Gleich/nuke/releases/download/v1.0.2/nuke_1.0.2_darwin_amd64.tar.gz"
+    sha256 "e5532d25c032563d3d9c76ee2554880be3409f2185eefe99e576b853196fadae"
   elsif OS.linux?
   end
 
