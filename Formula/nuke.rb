@@ -2,12 +2,12 @@
 class Nuke < Formula
   desc "☢️ Force quit all applications with one terminal command"
   homepage "https://mattglei.ch"
-  version "1.0.5"
+  version "1.0.6"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/Matt-Gleich/nuke/releases/download/v1.0.5/nuke_1.0.5_darwin_amd64.tar.gz"
-    sha256 "9a6db0d2899cef09309fd50d62ef8e32663590607e84bbfd53283b669ccae4de"
+    url "https://github.com/Matt-Gleich/nuke/releases/download/v1.0.6/nuke_1.0.6_darwin_amd64.tar.gz"
+    sha256 "91aaf09a85085be48cc8c67454b1d520d4d656f63984c6a309655a7a0e697394"
   elsif OS.linux?
   end
 
