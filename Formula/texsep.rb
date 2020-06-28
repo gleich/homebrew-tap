@@ -2,24 +2,24 @@
 class Texsep < Formula
   desc "Separate your pdfs from your tex files"
   homepage "https://mattglei.ch"
-  version "1.0.0"
+  version "1.5.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/Matt-Gleich/texsep/releases/download/v1.0.0/texsep_1.0.0_darwin_amd64.tar.gz"
-    sha256 "cef9fb6c55914d52cb475b5ad27aa474d96e6c0cdecae0611f095d7944f23732"
+    url "https://github.com/Matt-Gleich/texsep/releases/download/v1.5.0/texsep_1.5.0_darwin_amd64.tar.gz"
+    sha256 "fa6724a6e273beafe58b636e2333ba56f3f78bc1201ad177ac9d2e5a045edd86"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/Matt-Gleich/texsep/releases/download/v1.0.0/texsep_1.0.0_linux_amd64.tar.gz"
-      sha256 "25cb266f9d6bd70099056b33936ced3a43afec477ac901b0db5b040fb7d6d968"
+      url "https://github.com/Matt-Gleich/texsep/releases/download/v1.5.0/texsep_1.5.0_linux_amd64.tar.gz"
+      sha256 "ae30c5b6b67f083de309daead0b8453198ccaec00fd7c8d10837545687ccc9a3"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Matt-Gleich/texsep/releases/download/v1.0.0/texsep_1.0.0_linux_arm64.tar.gz"
-        sha256 "dd73c5931aa5ad9a1e2440cfeb53433a97233d551324b39ec24e360744c55736"
+        url "https://github.com/Matt-Gleich/texsep/releases/download/v1.5.0/texsep_1.5.0_linux_arm64.tar.gz"
+        sha256 "893d573ceb06bd9727688130c6e4c24e784c80e2503d1fd6e747029cba6c798b"
       else
-        url "https://github.com/Matt-Gleich/texsep/releases/download/v1.0.0/texsep_1.0.0_linux_armv6.tar.gz"
-        sha256 "4067783f2cb69140b537aedb68eada9bb6c151bc9ee279fdb9be5bfb0f57e7d4"
+        url "https://github.com/Matt-Gleich/texsep/releases/download/v1.5.0/texsep_1.5.0_linux_armv6.tar.gz"
+        sha256 "148a29885a036bbd6792cffff15bc3305d7754a885cfa6918fc8b8070077f5b4"
       end
     end
   end
