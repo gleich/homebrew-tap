@@ -7,7 +7,7 @@ class Nuke < Formula
 
   if OS.mac?
     url "https://github.com/Matt-Gleich/nuke/releases/download/v3.2.0/nuke_3.2.0_darwin_amd64.tar.gz"
-    sha256 "2ca3809600d573864b1c43e6f4bfdc394c0967fd7a1d1c3b1f1639051f4b0d84"
+    sha256 "47fa7e0a87a920812f6099c15a494f64dff3cbf77329d0b12425c5b242339619"
   elsif OS.linux?
   end
 
