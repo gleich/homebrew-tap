@@ -2,24 +2,24 @@
 class Nuke < Formula
   desc "☢️ Force quit all applications with one terminal command"
   homepage "https://mattglei.ch"
-  version "4.4.1"
+  version "5.0.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/Matt-Gleich/nuke/releases/download/v4.4.1/nuke_4.4.1_darwin_amd64.tar.gz"
-    sha256 "763b1184da534fde0b9c968a800ad3520d2517bd142c59aca2dcac228e905d82"
+    url "https://github.com/Matt-Gleich/nuke/releases/download/v5.0.0/nuke_5.0.0_darwin_amd64.tar.gz"
+    sha256 "c93e4a71ad8b0d13c8c3129efa3189c7afcc7c1de524ca2c3be88489bac0b063"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/Matt-Gleich/nuke/releases/download/v4.4.1/nuke_4.4.1_linux_amd64.tar.gz"
-      sha256 "ba34e5c66f410c13a684fedbc691cb69ae66db7551f26ca926c96f97f39872a6"
+      url "https://github.com/Matt-Gleich/nuke/releases/download/v5.0.0/nuke_5.0.0_linux_amd64.tar.gz"
+      sha256 "87f221386c0d343a271866e9c79641a3da638131ce13cd223f32f2a4fc7ed09e"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Matt-Gleich/nuke/releases/download/v4.4.1/nuke_4.4.1_linux_arm64.tar.gz"
-        sha256 "18ddeedffe18cff6ea738dc5ec669edd6b29d0507db4bebc3fd1a8f208a7a127"
+        url "https://github.com/Matt-Gleich/nuke/releases/download/v5.0.0/nuke_5.0.0_linux_arm64.tar.gz"
+        sha256 "3853cbcb67a6f3f620e7cfc1efdf4c2534be5965f2ebe4b04c44cf51cb786ca7"
       else
-        url "https://github.com/Matt-Gleich/nuke/releases/download/v4.4.1/nuke_4.4.1_linux_armv6.tar.gz"
-        sha256 "d3f6b0490362128a347a812654b23d9f2abf0e0d75cb64512b9445fdfd80a6cc"
+        url "https://github.com/Matt-Gleich/nuke/releases/download/v5.0.0/nuke_5.0.0_linux_armv6.tar.gz"
+        sha256 "fdeb10b0469deaa179c413495240c62c91e7d7011046db53693e9f2f18d4fa8d"
       end
     end
   end
