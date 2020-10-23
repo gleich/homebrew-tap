@@ -7,19 +7,19 @@ class Fgh < Formula
 
   if OS.mac?
     url "https://github.com/Matt-Gleich/fgh/releases/download/v1.0.0/fgh_1.0.0_darwin_amd64.tar.gz"
-    sha256 "b8d7ebb3e5d6687ce08bc146269cdc15f7e8241d8046bf94b931434055b95132"
+    sha256 "9e5afe50e18b2938073359340180d2af39d2a07285f06d5e9bdbef6b842a338d"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/Matt-Gleich/fgh/releases/download/v1.0.0/fgh_1.0.0_linux_amd64.tar.gz"
-      sha256 "176cab6b3db0852eeb16d8daaa662fedf460240d059481a8660c2a39c137f32f"
+      sha256 "c996bf7b48c9576648e2f0c2d0b0bffda20c11e4cd9e2186a2f4478fe5a3b428"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/Matt-Gleich/fgh/releases/download/v1.0.0/fgh_1.0.0_linux_arm64.tar.gz"
-        sha256 "7a8d896eba1abbe9637b37830ffccac2f7a526d787b918361bb5bd3f3169a088"
+        sha256 "08e4715d8f4807861234e3f8e01a6768a62ab55a6517fa4744d70238d7a59986"
       else
         url "https://github.com/Matt-Gleich/fgh/releases/download/v1.0.0/fgh_1.0.0_linux_armv6.tar.gz"
-        sha256 "62375611b169bf098c692d73234b43520483bcbb57eb55823f82cc5a9c794016"
+        sha256 "d81e042fa5773e2beff82b8575e4256e0b8b38e5da7fa6f4c6a90aa6984e505f"
       end
     end
   end
