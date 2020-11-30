@@ -2,26 +2,24 @@
 class Fgh < Formula
   desc "📁 Automate the organization of your cloned GitHub repositories"
   homepage "https://github.com/Matt-Gleich/fgh"
-  version "2.1.0"
+  version "2.2.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.1.0/fgh_2.1.0_darwin_amd64.tar.gz"
-    sha256 "be77a4f992a6aeac20e51aae8ced2df366891042940ef4e9016e6dbf692ad566"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/Matt-Gleich/fgh/releases/download/v2.1.0/fgh_2.1.0_linux_amd64.tar.gz"
-      sha256 "e68997c1214a26850e15a5ec060df35dbf036bb614ea9e70a26fd8be3881ddae"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/Matt-Gleich/fgh/releases/download/v2.1.0/fgh_2.1.0_linux_arm64.tar.gz"
-        sha256 "dc460e8c020126eb3764fdc8012f2200cea8865f58524142fcee819e688ed02c"
-      else
-        url "https://github.com/Matt-Gleich/fgh/releases/download/v2.1.0/fgh_2.1.0_linux_armv6.tar.gz"
-        sha256 "ef171d019902f47371da59ee1509983c7b89939ae7911a76b3e242e492457d3f"
-      end
-    end
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.2.0/fgh_2.2.0_darwin_amd64.tar.gz"
+    sha256 "8bdbb22a64132f912856861fff37603783142ed0f571b7b3e5c55fe884e7167f"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.2.0/fgh_2.2.0_linux_amd64.tar.gz"
+    sha256 "570e71953c90c08d7f7ae229f3928dff7090b712a0ba99b77998cb6d876990e9"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.2.0/fgh_2.2.0_linux_armv6.tar.gz"
+    sha256 "c7c120a3c8bf0892ee9573f07847f8be2485e2ad96cbe6e3ff58c2e865833b61"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.2.0/fgh_2.2.0_linux_arm64.tar.gz"
+    sha256 "90bc904a8e0dea9cd7a5ad7404eda3759fedb30c3573c934b8a5d436adf902ae"
   end
 
   def install
