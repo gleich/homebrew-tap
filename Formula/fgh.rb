@@ -2,24 +2,24 @@
 class Fgh < Formula
   desc "📁 Automate the organization of your cloned GitHub repositories"
   homepage "https://github.com/Matt-Gleich/fgh"
-  version "2.5.2"
+  version "2.5.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.5.2/fgh_2.5.2_darwin_amd64.tar.gz"
-    sha256 "a7fd06f8b8a1a85298e74935688b00121a1927294f1c9a76974ef60cc91b456a"
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.5.3/fgh_2.5.3_darwin_amd64.tar.gz"
+    sha256 "3307f749bc861a8aea57bb9930497e4ed4a7e9725461e4eb350b2424f702bc2f"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.5.2/fgh_2.5.2_linux_amd64.tar.gz"
-    sha256 "092b369d6adb1e882acd356444b7f654d6e9a90764648e44626e17654cf68c92"
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.5.3/fgh_2.5.3_linux_amd64.tar.gz"
+    sha256 "d57fea98c50f41d079814a371c49a927679b48eb41dc7d0ed09fe96a9b146707"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.5.2/fgh_2.5.2_linux_armv6.tar.gz"
-    sha256 "480af849d936b322f69d79d79d37c1e3b8a378c91f018df0444ade897718358b"
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.5.3/fgh_2.5.3_linux_armv6.tar.gz"
+    sha256 "a687a537ed24919b8da81b6d1891580b29485027fefcb6bf202da97ac071a3eb"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.5.2/fgh_2.5.2_linux_arm64.tar.gz"
-    sha256 "add1d493579dade9fda00a81f9c52a139b0afc42df6eef631bc5ab29f2781e02"
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.5.3/fgh_2.5.3_linux_arm64.tar.gz"
+    sha256 "97d6c5534b8b5e49ec2fea9d14d2512a47329998d1b222e194679bf56ec3821d"
   end
 
   def install
