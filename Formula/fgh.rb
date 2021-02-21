@@ -5,24 +5,28 @@
 class Fgh < Formula
   desc "📁 Automate the organization of your cloned GitHub repositories"
   homepage "https://github.com/Matt-Gleich/fgh"
-  version "2.7.4"
+  version "2.7.5"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.4/fgh_2.7.4_darwin_amd64.tar.gz"
-    sha256 "0d652e0a2cc66343b09f4c801380f377d273d0e7a47ee678181c3acf123808a0"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.5/fgh_2.7.5_darwin_amd64.tar.gz"
+    sha256 "09a3aac9343cd9131d1aa3d4f032a5c2ebee0452c12ed2e8b243fdc3890ffa19"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.5/fgh_2.7.5_darwin_arm64.tar.gz"
+    sha256 "0152a06fbe0dcb5cebd795373a93c49a264e3c139b40aae7bd34b60d72c5916c"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.4/fgh_2.7.4_linux_amd64.tar.gz"
-    sha256 "ddf9a267c9f21e8d850c08e09c0f76af6605e0015f3f9febc43ab11fa23d860c"
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.5/fgh_2.7.5_linux_amd64.tar.gz"
+    sha256 "ecfa0258d186cdfd5513c9f5c6a8b0daee017812564eaa23e8db1ba901a2ce63"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.4/fgh_2.7.4_linux_armv6.tar.gz"
-    sha256 "b50983eaa5e4eb445ee481a773784d3c930ff173adfc491188a46de4cac07e37"
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.5/fgh_2.7.5_linux_armv6.tar.gz"
+    sha256 "001f2a29eac8c49bfadcad3886cfd49655649b250ac69d7df97b8dfe8f53e04f"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.4/fgh_2.7.4_linux_arm64.tar.gz"
-    sha256 "1b104acf0b7ca1d02e651b131dfea5bd851c5024c1cc30d608b3702eb3e32ae3"
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.5/fgh_2.7.5_linux_arm64.tar.gz"
+    sha256 "4611ae74949b609a3e4be5ae6ea6927314d7e5a5c032368c0a7f339cf7b00535"
   end
 
   def install
