@@ -5,28 +5,28 @@
 class Fgh < Formula
   desc "📁 Automate the organization of your cloned GitHub repositories"
   homepage "https://github.com/Matt-Gleich/fgh"
-  version "2.7.6"
+  version "2.7.7"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.6/fgh_2.7.6_darwin_amd64.tar.gz"
-    sha256 "93f00863548514ed8ac3dc5c98c3794499c912dc6650f7ee2355b63443a609ef"
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.7/fgh_2.7.7_darwin_amd64.tar.gz"
+    sha256 "ed48a99ce0c1f559be9f554562894aa0c978612e6abadcde2cf0bac97c0b69ea"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.6/fgh_2.7.6_darwin_arm64.tar.gz"
-    sha256 "48565ca3c3e8d385f91d13e17fc28562b0c683f6dea17c8225738ee0dd43d882"
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.7/fgh_2.7.7_darwin_arm64.tar.gz"
+    sha256 "a9fb577d72b1deb6ec864fa1abf4b25af3c002d3cf1b3b05cf94a8960ad1611c"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.6/fgh_2.7.6_linux_amd64.tar.gz"
-    sha256 "1eeab8d5ffbaf0904f40c9603c75d78aa96cc610d381942155231d407fe8856d"
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.7/fgh_2.7.7_linux_amd64.tar.gz"
+    sha256 "c71add6e5025e2c8ce6443fc4f22dea148481445da8588cd217edc6fdd80f30d"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.6/fgh_2.7.6_linux_armv6.tar.gz"
-    sha256 "4fd7d72dd0a8af26eb0f901ef1722d6ea121cc462d55fa2ab26de1d07bcf686f"
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.7/fgh_2.7.7_linux_armv6.tar.gz"
+    sha256 "292fdd4bb6e4d0e9c798f44fae5db4d00901c3ede0051f9cf10a60dd80fc0897"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.6/fgh_2.7.6_linux_arm64.tar.gz"
-    sha256 "d2ac62b33c633a9264154b20d606c0ea2eb19e697ee4b931fb32995db23e2fe5"
+    url "https://github.com/Matt-Gleich/fgh/releases/download/v2.7.7/fgh_2.7.7_linux_arm64.tar.gz"
+    sha256 "889cba81cb76665753f8b191816906bbd2f1fd91cf08b62c7e5d34cb3da923f2"
   end
 
   def install
