@@ -5,32 +5,32 @@
 class Solar < Formula
   desc ""
   homepage "https://github.com/gleich/solar"
-  version "1.1.0"
+  version "1.1.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gleich/solar/releases/download/v1.1.0/solar_1.1.0_darwin_amd64.tar.gz"
-      sha256 "0a65adcc9029cdcb7194721920533ed9330b8413b2a13c32a624840492b5d73c"
+      url "https://github.com/gleich/solar/releases/download/v1.1.1/solar_1.1.1_darwin_amd64.tar.gz"
+      sha256 "ddff05510aad0e6c9494a2d80ed8b0c6c481144b2bb360aebae9a98513a7410b"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gleich/solar/releases/download/v1.1.0/solar_1.1.0_darwin_arm64.tar.gz"
-      sha256 "cca23eb538878671584c50f8925d298f7b6e910cc5aa606b98d063a5fc54b134"
+      url "https://github.com/gleich/solar/releases/download/v1.1.1/solar_1.1.1_darwin_arm64.tar.gz"
+      sha256 "3462463ba8a8bd6be333feee4c396e62bd5d67064d033463831a8d23abdaf129"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/gleich/solar/releases/download/v1.1.0/solar_1.1.0_linux_amd64.tar.gz"
-      sha256 "8caf6a272323013f2ab2b77f76945a1e98a5e23a8be4d4c60ecd368831adbfd9"
+      url "https://github.com/gleich/solar/releases/download/v1.1.1/solar_1.1.1_linux_amd64.tar.gz"
+      sha256 "92808d6970f0d05344a146e8ac2ba079bfdf3ce379ed9354da9439ceb488855c"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/gleich/solar/releases/download/v1.1.0/solar_1.1.0_linux_armv6.tar.gz"
-      sha256 "92ab6803958ed7e2a9899eac90b646b3d59ef4b5be6bdb6a1fe7508ddbeb199a"
+      url "https://github.com/gleich/solar/releases/download/v1.1.1/solar_1.1.1_linux_armv6.tar.gz"
+      sha256 "0176342eff3c2e12c526e3b47c4434e01dd2c32d103f7cced78a6239dc480bdc"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gleich/solar/releases/download/v1.1.0/solar_1.1.0_linux_arm64.tar.gz"
-      sha256 "b3770a00b7a3795e053f5630f9a390d9e9da378e6e3b1a031eea5f2e83065fdf"
+      url "https://github.com/gleich/solar/releases/download/v1.1.1/solar_1.1.1_linux_arm64.tar.gz"
+      sha256 "236a3b9d939ebc415b14d11a50a29baa10bd85ec8a84b084e880d0d13b178de2"
     end
   end
 
