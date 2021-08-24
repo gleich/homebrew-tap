@@ -4,8 +4,8 @@ My homebrew taps
 
 ## Formulas
 
-| 📦 Project                                                                | 📟 Install Command                                           |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| 📦 Project                                                           | 📟 Install Command                                      |
+| -------------------------------------------------------------------- | ------------------------------------------------------- |
 | [nuke](https://github.com/gleich/nuke)                               | `brew install gleich/homebrew-taps/nuke`                |
 | [light-speed-sorting](https://github.com/gleich/Light-Speed-Sorting) | `brew install gleich/homebrew-taps/light-speed-sorting` |
 | [texsep](https://github.com/gleich/texsep)                           | `brew install gleich/homebrew-taps/texsep`              |
