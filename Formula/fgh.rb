@@ -5,32 +5,32 @@
 class Fgh < Formula
   desc "📁 Automate the organization of your cloned GitHub repositories"
   homepage "https://github.com/gleich/fgh"
-  version "2.8.1"
+  version "2.8.2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gleich/fgh/releases/download/v2.8.1/fgh_2.8.1_darwin_amd64.tar.gz"
-      sha256 "e0c7dc9c03b3e4650b33bffd9c928086213aba7ece918f5b1f0f52cc13f6601d"
+      url "https://github.com/gleich/fgh/releases/download/v2.8.2/fgh_2.8.2_darwin_amd64.tar.gz"
+      sha256 "e3e8717ec487ec5d42f050fffc8e09e4845854a3d6202e2c550f015f2dc6dbf6"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gleich/fgh/releases/download/v2.8.1/fgh_2.8.1_darwin_arm64.tar.gz"
-      sha256 "3713bd13eab06180dc5f17f9d6d2205b0de77997b7cd40931fc15596f6a440d5"
+      url "https://github.com/gleich/fgh/releases/download/v2.8.2/fgh_2.8.2_darwin_arm64.tar.gz"
+      sha256 "6268275a7231cc9ab2c2be001d09b9c3d72af86dd3ac979eb83639d204d75a12"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/gleich/fgh/releases/download/v2.8.1/fgh_2.8.1_linux_amd64.tar.gz"
-      sha256 "aabedb390e819c58cdc97a24b6fdd2d7af89e35fd557c9bdf5830f3174827179"
+      url "https://github.com/gleich/fgh/releases/download/v2.8.2/fgh_2.8.2_linux_amd64.tar.gz"
+      sha256 "c79da654ab9fde58fc3c5e86e33ddce7867a93440fe61990e480d18f47d2402f"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/gleich/fgh/releases/download/v2.8.1/fgh_2.8.1_linux_armv6.tar.gz"
-      sha256 "eb06d45e456602a0740716393cbcb7f2eb7d47950e099f5d0efa4f5a1bdde157"
+      url "https://github.com/gleich/fgh/releases/download/v2.8.2/fgh_2.8.2_linux_armv6.tar.gz"
+      sha256 "841b48bd7b244e56f2521caf22011bde97dfdf4413214146643a83d3584b4058"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gleich/fgh/releases/download/v2.8.1/fgh_2.8.1_linux_arm64.tar.gz"
-      sha256 "5719171ddac57e814bebf7c8287ec43e05bf09645e599a3d58e7345b561b3267"
+      url "https://github.com/gleich/fgh/releases/download/v2.8.2/fgh_2.8.2_linux_arm64.tar.gz"
+      sha256 "94214f7cf9323906a09bfc4292232bc5c1862a61ad1ac92226aeeaaf4538f31e"
     end
   end
 
