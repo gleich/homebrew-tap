@@ -5,36 +5,51 @@
 class Fgh < Formula
   desc "📁 Automate the organization of your cloned GitHub repositories"
   homepage "https://github.com/gleich/fgh"
-  version "2.8.2"
-  bottle :unneeded
+  version "2.8.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gleich/fgh/releases/download/v2.8.2/fgh_2.8.2_darwin_amd64.tar.gz"
-      sha256 "e3e8717ec487ec5d42f050fffc8e09e4845854a3d6202e2c550f015f2dc6dbf6"
+      url "https://github.com/gleich/fgh/releases/download/v2.8.3/fgh_2.8.3_darwin_amd64.tar.gz"
+      sha256 "cf09c76e22f068419ff4103727a874c3c8ced3d56bbd4587f2c6f1a068588dbf"
+
+      def install
+        bin.install "fgh"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gleich/fgh/releases/download/v2.8.2/fgh_2.8.2_darwin_arm64.tar.gz"
-      sha256 "6268275a7231cc9ab2c2be001d09b9c3d72af86dd3ac979eb83639d204d75a12"
+      url "https://github.com/gleich/fgh/releases/download/v2.8.3/fgh_2.8.3_darwin_arm64.tar.gz"
+      sha256 "0ce4ed9f3dcc5ab76ec23c1405f57d04f057468678d2eb9fc4f82d4397c08c92"
+
+      def install
+        bin.install "fgh"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/gleich/fgh/releases/download/v2.8.2/fgh_2.8.2_linux_amd64.tar.gz"
-      sha256 "c79da654ab9fde58fc3c5e86e33ddce7867a93440fe61990e480d18f47d2402f"
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/gleich/fgh/releases/download/v2.8.2/fgh_2.8.2_linux_armv6.tar.gz"
-      sha256 "841b48bd7b244e56f2521caf22011bde97dfdf4413214146643a83d3584b4058"
+      url "https://github.com/gleich/fgh/releases/download/v2.8.3/fgh_2.8.3_linux_armv6.tar.gz"
+      sha256 "4bdf80300eea059043cbf962ea7cb37ebcb833b7ad7571fd0ec32a1f9760e69d"
+
+      def install
+        bin.install "fgh"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gleich/fgh/releases/download/v2.8.2/fgh_2.8.2_linux_arm64.tar.gz"
-      sha256 "94214f7cf9323906a09bfc4292232bc5c1862a61ad1ac92226aeeaaf4538f31e"
-    end
-  end
+      url "https://github.com/gleich/fgh/releases/download/v2.8.3/fgh_2.8.3_linux_arm64.tar.gz"
+      sha256 "15ebef29b2409e275510cdecdc3a558e8302862397ae7b6693429413efb43c8e"
 
-  def install
-    bin.install "fgh"
+      def install
+        bin.install "fgh"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/gleich/fgh/releases/download/v2.8.3/fgh_2.8.3_linux_amd64.tar.gz"
+      sha256 "9818350e937316fed7933555683788445000a3bb5bf213a32d192a4e0cc29745"
+
+      def install
+        bin.install "fgh"
+      end
+    end
   end
 end
