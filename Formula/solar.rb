@@ -5,36 +5,51 @@
 class Solar < Formula
   desc ""
   homepage "https://github.com/gleich/solar"
-  version "1.1.2"
-  bottle :unneeded
+  version "1.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gleich/solar/releases/download/v1.1.2/solar_1.1.2_darwin_amd64.tar.gz"
-      sha256 "f88ccb97f15861f9b478bb015a203a27f1847f10c2c0811c43cf8342908d8cf4"
+      url "https://github.com/gleich/solar/releases/download/v1.1.3/solar_1.1.3_darwin_amd64.tar.gz"
+      sha256 "5da3810f286a6d4917f18682f21917181da75259be7ff9ba70458c7e4c13ddf0"
+
+      def install
+        bin.install "solar"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gleich/solar/releases/download/v1.1.2/solar_1.1.2_darwin_arm64.tar.gz"
-      sha256 "3bd63e53ea21671db9c1edcc4a8a2d1912624d5f5524def928ab98a7610c1cf2"
+      url "https://github.com/gleich/solar/releases/download/v1.1.3/solar_1.1.3_darwin_arm64.tar.gz"
+      sha256 "9d30bf7a5c3f2fbbb59e2af55f70eefbad536f4af3f03b565fe9b25538a288cf"
+
+      def install
+        bin.install "solar"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/gleich/solar/releases/download/v1.1.2/solar_1.1.2_linux_amd64.tar.gz"
-      sha256 "b9c1b613cb4e97f796d661edddd63756102e7ef2b880293eb8b0526189c5d487"
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/gleich/solar/releases/download/v1.1.2/solar_1.1.2_linux_armv6.tar.gz"
-      sha256 "afb3f918683f8ef5567ae6226cdfeb28ed5edbb2293ba26fa9ad89d0716f5459"
+      url "https://github.com/gleich/solar/releases/download/v1.1.3/solar_1.1.3_linux_armv6.tar.gz"
+      sha256 "3eaf52b931be1711d2e6e83da95c79960b9698c00a9a02feaae7fb5ddb0f8b82"
+
+      def install
+        bin.install "solar"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/gleich/solar/releases/download/v1.1.3/solar_1.1.3_linux_amd64.tar.gz"
+      sha256 "a5d31abb7995946e459b4dd6accd19826b5ad93e38e49133f00002be679745d8"
+
+      def install
+        bin.install "solar"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gleich/solar/releases/download/v1.1.2/solar_1.1.2_linux_arm64.tar.gz"
-      sha256 "c97d25ad6d34baa4f51656b4b057249ed03689d1c210c2f162325e77ba6f3092"
-    end
-  end
+      url "https://github.com/gleich/solar/releases/download/v1.1.3/solar_1.1.3_linux_arm64.tar.gz"
+      sha256 "de4b64c244408af8658b7576a81f6427f125f7d06ce81c669a7b614f6027cb01"
 
-  def install
-    bin.install "solar"
+      def install
+        bin.install "solar"
+      end
+    end
   end
 end
