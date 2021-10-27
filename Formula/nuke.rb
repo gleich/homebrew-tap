@@ -5,20 +5,20 @@
 class Nuke < Formula
   desc "☢️ Force quit all applications with one terminal command"
   homepage "https://github.com/gleich/nuke"
-  version "5.2.1"
+  version "5.2.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/gleich/nuke/releases/download/v5.2.1/nuke_5.2.1_darwin_amd64.tar.gz"
-      sha256 "9bd0e1e8b1940dc95284848f708565376e9954a80fa7d336d470ca64e1f4e474"
+    if Hardware::CPU.arm?
+      url "https://github.com/gleich/nuke/releases/download/5.2.2/nuke_5.2.2_darwin_arm64.tar.gz"
+      sha256 "068a46a8941368d4693c45d7b6fc658ac3d1c6042c7f3201323295aeedc64fd5"
 
       def install
         bin.install "nuke"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/gleich/nuke/releases/download/v5.2.1/nuke_5.2.1_darwin_arm64.tar.gz"
-      sha256 "291833586afe988bb08c076b6afa134709753ec2df3db7ffee293eb185264a72"
+    if Hardware::CPU.intel?
+      url "https://github.com/gleich/nuke/releases/download/5.2.2/nuke_5.2.2_darwin_amd64.tar.gz"
+      sha256 "2f30bfc855c41fda499337e5480d296e0265a5eaedb38eeb048d2cf3c617135f"
 
       def install
         bin.install "nuke"
@@ -27,25 +27,25 @@ class Nuke < Formula
   end
 
   on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/gleich/nuke/releases/download/5.2.2/nuke_5.2.2_linux_amd64.tar.gz"
+      sha256 "9bd2085aed3bdf244f733ab8b8bc9873cb585c96868dca4dbb22ecdb7a38d200"
+
+      def install
+        bin.install "nuke"
+      end
+    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/gleich/nuke/releases/download/v5.2.1/nuke_5.2.1_linux_armv6.tar.gz"
-      sha256 "3cce2952d88ff66949096b173cab1af8d6920961aa611387cee0a54750b9dd5e"
+      url "https://github.com/gleich/nuke/releases/download/5.2.2/nuke_5.2.2_linux_armv6.tar.gz"
+      sha256 "ab9cfe599de1947c633d2b7d0dd726d9abde54a77731f8f06f3341d753dc6c2f"
 
       def install
         bin.install "nuke"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gleich/nuke/releases/download/v5.2.1/nuke_5.2.1_linux_arm64.tar.gz"
-      sha256 "b94cef57a3944ab7e7056ebad1ccd283162f2d8203061276a99c5063a22ecdd8"
-
-      def install
-        bin.install "nuke"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/gleich/nuke/releases/download/v5.2.1/nuke_5.2.1_linux_amd64.tar.gz"
-      sha256 "49900888d0adf563fb81ce5e3fa0c30b07c425e401ab343246c1fed014d9c756"
+      url "https://github.com/gleich/nuke/releases/download/5.2.2/nuke_5.2.2_linux_arm64.tar.gz"
+      sha256 "59a3c3f99942b23370aee365fc75233e5db91402f3b817245cf377aa672dff3e"
 
       def install
         bin.install "nuke"
