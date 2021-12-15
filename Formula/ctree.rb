@@ -5,36 +5,51 @@
 class Ctree < Formula
   desc "🎄 A Christmas tree right from your terminal!"
   homepage "https://github.com/gleich/ctree"
-  version "1.0.1"
-  bottle :unneeded
+  version "1.0.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gleich/ctree/releases/download/v1.0.1/ctree_1.0.1_darwin_amd64.tar.gz"
-      sha256 "affff3298729504837d7bc3e63971f5a4d84d9605f5267ccca13e54b590ff887"
+      url "https://github.com/gleich/ctree/releases/download/v1.0.4/ctree_1.0.4_darwin_amd64.tar.gz"
+      sha256 "eda5a643179570c0d69b59b792dee8e65faaa8ee5dd8b07ec54439c93a862479"
+
+      def install
+        bin.install "ctree"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gleich/ctree/releases/download/v1.0.1/ctree_1.0.1_darwin_arm64.tar.gz"
-      sha256 "f40f25fc5dc25dbd07d8e3274d89f9cc951520281fc0fd35fbdbe90bd2bbac16"
+      url "https://github.com/gleich/ctree/releases/download/v1.0.4/ctree_1.0.4_darwin_arm64.tar.gz"
+      sha256 "87c042bb1ffe0260b41161b0a828d9b9726dfde8829d1919ba530bd51dbb7731"
+
+      def install
+        bin.install "ctree"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/gleich/ctree/releases/download/v1.0.1/ctree_1.0.1_linux_amd64.tar.gz"
-      sha256 "9251e666ba361ca86d22b93885cad2f5322383bb22e78b262168670b2ebe8d81"
+      url "https://github.com/gleich/ctree/releases/download/v1.0.4/ctree_1.0.4_linux_amd64.tar.gz"
+      sha256 "da00fa112ce9cfdb0c271d6244be37f253f8411fcf542679bcca9f9291b77b41"
+
+      def install
+        bin.install "ctree"
+      end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/gleich/ctree/releases/download/v1.0.1/ctree_1.0.1_linux_armv6.tar.gz"
-      sha256 "4e9fa34267c95fbf4b217349a5fc185de73e4b2b703f3920f348261d65582333"
+      url "https://github.com/gleich/ctree/releases/download/v1.0.4/ctree_1.0.4_linux_armv6.tar.gz"
+      sha256 "e03507e9fe9b8dbdb94f91c13ad4e02c2a7419bf4ba754cb95d497df06492295"
+
+      def install
+        bin.install "ctree"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gleich/ctree/releases/download/v1.0.1/ctree_1.0.1_linux_arm64.tar.gz"
-      sha256 "c730a9cb8abac5f89034a590dc98506cbea316d1661f33c5d7689fda627c4ec0"
-    end
-  end
+      url "https://github.com/gleich/ctree/releases/download/v1.0.4/ctree_1.0.4_linux_arm64.tar.gz"
+      sha256 "1c9e2d5da0162aaadf703f4527f80c78e3443cddef9ee886a02db47d5c5cb598"
 
-  def install
-    bin.install "ctree"
+      def install
+        bin.install "ctree"
+      end
+    end
   end
 end
