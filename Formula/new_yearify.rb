@@ -10,7 +10,7 @@ class NewYearify < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/gleich/new_yearify/releases/download/v1.0.0/new_yearify_1.0.0_darwin_amd64.tar.gz"
-      sha256 "f27ddb7a3bcede2df3c41f318d51af61b74737a5bec716ac096b5bb6d30c48e0"
+      sha256 "735fa232257a64f0f63e8569ee4a4ee7865461295b264a21f88e470298eb79bc"
 
       def install
         bin.install "new_yearify"
@@ -18,7 +18,7 @@ class NewYearify < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/gleich/new_yearify/releases/download/v1.0.0/new_yearify_1.0.0_darwin_arm64.tar.gz"
-      sha256 "dfce21d00ffc9b8575d5199f3efa162547712963485d817271d930ac112c7039"
+      sha256 "1c66d157bcbc4115dd06fd86c4190753f868047a578b756cd4590c0b1ca9e02a"
 
       def install
         bin.install "new_yearify"
@@ -29,7 +29,7 @@ class NewYearify < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/gleich/new_yearify/releases/download/v1.0.0/new_yearify_1.0.0_linux_arm64.tar.gz"
-      sha256 "79781cfa70ce231acc7a68a0d4de7b78579f3fedad8f44af1c35afd9b5df6980"
+      sha256 "48a811dc3ac401543cfde983df6f2d1feb8c798fab5f03c2f4cb8efe45d4e197"
 
       def install
         bin.install "new_yearify"
@@ -37,7 +37,7 @@ class NewYearify < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/gleich/new_yearify/releases/download/v1.0.0/new_yearify_1.0.0_linux_amd64.tar.gz"
-      sha256 "bfd1b801730878b5f9af483b36a5caea35e66a009d866d621ea491c7ccb9cb6a"
+      sha256 "70477ad4c6fd8f590f8e16f1c3236959f739c611a1017ce9c97d36e02140efc0"
 
       def install
         bin.install "new_yearify"
@@ -45,7 +45,7 @@ class NewYearify < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/gleich/new_yearify/releases/download/v1.0.0/new_yearify_1.0.0_linux_armv6.tar.gz"
-      sha256 "ea406daef641f6bee32801e79cedd6ed41fb859dd8e6aab06d8f30a82fe907dd"
+      sha256 "b001f69b7270f61d395051b93073b8262c65e044664d3960bcfe94ea4a2eaaa6"
 
       def install
         bin.install "new_yearify"
