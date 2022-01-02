@@ -5,20 +5,20 @@
 class NewYearify < Formula
   desc "Update the copyright year in all of your GitHub repos "
   homepage "https://github.com/gleich/new_yearify"
-  version "1.0.0"
+  version "1.0.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/gleich/new_yearify/releases/download/v1.0.0/new_yearify_1.0.0_darwin_amd64.tar.gz"
-      sha256 "735fa232257a64f0f63e8569ee4a4ee7865461295b264a21f88e470298eb79bc"
+    if Hardware::CPU.arm?
+      url "https://github.com/gleich/new_yearify/releases/download/v1.0.1/new_yearify_1.0.1_darwin_arm64.tar.gz"
+      sha256 "66caa3a37dc4656672fa5104e90cbdd47a63af18f421ed819ba0e6b16900f0a8"
 
       def install
         bin.install "new_yearify"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/gleich/new_yearify/releases/download/v1.0.0/new_yearify_1.0.0_darwin_arm64.tar.gz"
-      sha256 "1c66d157bcbc4115dd06fd86c4190753f868047a578b756cd4590c0b1ca9e02a"
+    if Hardware::CPU.intel?
+      url "https://github.com/gleich/new_yearify/releases/download/v1.0.1/new_yearify_1.0.1_darwin_amd64.tar.gz"
+      sha256 "15e63f33a12172a6dcb1dfef8c89aa51674511bf05f354978e2daf584a3f185a"
 
       def install
         bin.install "new_yearify"
@@ -27,25 +27,25 @@ class NewYearify < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gleich/new_yearify/releases/download/v1.0.0/new_yearify_1.0.0_linux_arm64.tar.gz"
-      sha256 "48a811dc3ac401543cfde983df6f2d1feb8c798fab5f03c2f4cb8efe45d4e197"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/gleich/new_yearify/releases/download/v1.0.1/new_yearify_1.0.1_linux_armv6.tar.gz"
+      sha256 "d96b73dd4b4e25490d67cc64e04e30a0a096fd3a2f7b72fb291fc8d7ff04536a"
 
       def install
         bin.install "new_yearify"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gleich/new_yearify/releases/download/v1.0.0/new_yearify_1.0.0_linux_amd64.tar.gz"
-      sha256 "70477ad4c6fd8f590f8e16f1c3236959f739c611a1017ce9c97d36e02140efc0"
+      url "https://github.com/gleich/new_yearify/releases/download/v1.0.1/new_yearify_1.0.1_linux_amd64.tar.gz"
+      sha256 "d589e0a036e32709d732b9f5bc77fe415acd1e833fdd52d3d9563f5dc4f1c5ec"
 
       def install
         bin.install "new_yearify"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/gleich/new_yearify/releases/download/v1.0.0/new_yearify_1.0.0_linux_armv6.tar.gz"
-      sha256 "b001f69b7270f61d395051b93073b8262c65e044664d3960bcfe94ea4a2eaaa6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/gleich/new_yearify/releases/download/v1.0.1/new_yearify_1.0.1_linux_arm64.tar.gz"
+      sha256 "756f6dc33d50a3123149250a0e8621e89edd68ca02e66c1e2886faf2b9bc43dd"
 
       def install
         bin.install "new_yearify"
