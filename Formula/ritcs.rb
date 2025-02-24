@@ -5,20 +5,20 @@
 class Ritcs < Formula
   desc "Seamlessly run commands on RIT CS machines with automatic upload, execution, and sync of your local directory."
   homepage "https://github.com/gleich/ritcs"
-  version "1.0.0"
+  version "1.0.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gleich/ritcs/releases/download/v1.0.0/ritcs_1.0.0_darwin_amd64.tar.gz"
-      sha256 "ddedea754f293493e22a72e3b695b883a8240fa7550d947fc49de17960969e75"
+      url "https://github.com/gleich/ritcs/releases/download/v1.0.1/ritcs_1.0.1_darwin_amd64.tar.gz"
+      sha256 "b3a26820805db50a8d1ad83df61cb3b26b4b13e4940c9985dce8cdbe93c249d0"
 
       def install
         bin.install "ritcs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gleich/ritcs/releases/download/v1.0.0/ritcs_1.0.0_darwin_arm64.tar.gz"
-      sha256 "a0cc2f5545747648e8fa0831afe6edcc575ca6b8045156011d086a85fd7f9627"
+      url "https://github.com/gleich/ritcs/releases/download/v1.0.1/ritcs_1.0.1_darwin_arm64.tar.gz"
+      sha256 "36b894ebc5c819ac176b38023fa8b9c15d84c6854eeb2ced6f0b13f8481146c4"
 
       def install
         bin.install "ritcs"
@@ -29,8 +29,8 @@ class Ritcs < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/gleich/ritcs/releases/download/v1.0.0/ritcs_1.0.0_linux_amd64.tar.gz"
-        sha256 "c23298b673c24fe3be77b740c25e68fdfc19f83da02fcc898a0137fda388b0f2"
+        url "https://github.com/gleich/ritcs/releases/download/v1.0.1/ritcs_1.0.1_linux_amd64.tar.gz"
+        sha256 "e8d639c8171afe67d9f5d54a84870b07b58730594fcb8d550c805ad436994cba"
 
         def install
           bin.install "ritcs"
@@ -39,8 +39,8 @@ class Ritcs < Formula
     end
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/gleich/ritcs/releases/download/v1.0.0/ritcs_1.0.0_linux_armv6.tar.gz"
-        sha256 "8de3841c0e828cea2693e01a475dc50f66874438069f2540f437bc87c4331bbb"
+        url "https://github.com/gleich/ritcs/releases/download/v1.0.1/ritcs_1.0.1_linux_armv6.tar.gz"
+        sha256 "878a64888b5b55f38e3183919fc5e0685ffe50fe82492d7875ca1f018f28ecea"
 
         def install
           bin.install "ritcs"
@@ -49,8 +49,8 @@ class Ritcs < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/gleich/ritcs/releases/download/v1.0.0/ritcs_1.0.0_linux_arm64.tar.gz"
-        sha256 "718debd928393bbf1b6384f54406e6e8f4653406f5a972343ed70d9da267b023"
+        url "https://github.com/gleich/ritcs/releases/download/v1.0.1/ritcs_1.0.1_linux_arm64.tar.gz"
+        sha256 "4437a3a5a9804e6187100e19e49ec9bcc3136c9e8c43b6a30c4a479e36b490cd"
 
         def install
           bin.install "ritcs"
